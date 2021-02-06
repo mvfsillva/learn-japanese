@@ -13,7 +13,6 @@ const Main = () => {
 
   useEffect(() => {
     const voices = window.speechSynthesis?.getVoices()
-
     const jpVoice = voices?.find((voice) => /ja-JP/.test(voice.lang))
     setVoice(jpVoice || voices?.[0])
   }, [])
